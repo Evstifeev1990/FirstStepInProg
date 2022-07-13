@@ -4,18 +4,18 @@ if(inputLine != null)
 {
     int inputNamber = int.Parse(inputLine);
 
-    int minusNamber = inputNamber * -1;
+    int minusNamber = 1;
 
-    string outputLine = "";
+    string outputLine = "0";
 
-    while(minusNamber < inputNamber)
+    while(minusNamber <= inputNamber)
     {
-        outputLine = outputLine + minusNamber + ", ";
+        outputLine = minusNamber*-1 + ", " + outputLine + ", " + minusNamber;
 
         minusNamber++;
     }
 
-    outputLine = outputLine + inputNamber;
+    // outputLine = outputLine + inputNamber;
 
     Console.Write(outputLine);
 
