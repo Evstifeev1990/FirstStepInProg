@@ -4,18 +4,35 @@
 //расстояние между ними в 2D пространстве.
 
 
-Console.WriteLine("Введите координаты Х точки А");
-int coordXALine = int.Parse(Console.ReadLine());
+int coordXALine;
+int coordXBLine;
+int coordYALine;
+int coordYBLine;
+double lenghtAB;
 
-Console.WriteLine("Введите координаты Y точки А");
-int coordYALine = int.Parse(Console.ReadLine());
+//метод считывания координат точек
+void readDataOfPoint()
+{
+    Console.WriteLine("Введите координаты Х точки А");
+    coordXALine = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите координаты Х точки B");
-int coordXBLine = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Y точки А");
+    coordYALine = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите координаты Y точки B");
-int coordYBLine = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Х точки B");
+    coordXBLine = int.Parse(Console.ReadLine());
 
-//Находим расстояние согласно формуле
-double lenghtAB = Math.Sqrt( Math.Pow((coordXALine-coordXBLine),2)+Math.Pow((coordYALine-coordYBLine),2));
+    Console.WriteLine("Введите координаты Y точки B");
+    coordYBLine = int.Parse(Console.ReadLine());
+}
+
+//Метод нахождения расстояния между точками
+void distanceAB()
+{
+    lenghtAB = Math.Sqrt(Math.Pow((coordXALine - coordXBLine), 2) + Math.Pow((coordYALine - coordYBLine), 2));
+}
+
+readDataOfPoint();
+distanceAB();
+
 Console.WriteLine(lenghtAB);
