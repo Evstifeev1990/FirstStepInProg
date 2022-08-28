@@ -1,5 +1,5 @@
 ﻿//реализация функции Аккермана Command+C и Comand+v очень сложно((((()))))
-tatic uint A(uint n, uint m)
+static uint A(uint n, uint m)
 {
   if (n == 0)
     return m + 1;
